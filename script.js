@@ -1,17 +1,16 @@
 "use strict";
-const productContainer = [...document.querySelectorAll(".product__container")];
-
+const containerProduct = [...document.querySelectorAll(".product__container")];
 const btnLeft = [...document.querySelectorAll(".btn--left")];
 const btnRight = [...document.querySelectorAll(".btn--right")];
 
-productContainer.forEach((item, i) => {
+containerProduct.forEach((item, i) => {
   let containerDimension = item.getBoundingClientRect();
-  let containerWidth = containerDimension.width;
-  btnRight[i].addEventListener("click", () => {
-    item.scrollLeft += containerWidth;
+  let containerWith = containerDimension.width;
+  btnLeft[i].addEventListener("click", () => {
+    item.scrollLeft -= containerWith;
   });
 
-  btnLeft[i].addEventListener("click", () => {
-    item.scrollLeft -= containerWidth;
+  btnRight[i].addEventListener("click", () => {
+    item.scrollLeft += containerWith;
   });
 });
