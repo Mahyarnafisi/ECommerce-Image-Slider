@@ -43,7 +43,7 @@ button:hover {
 .header {
   width: 100%;
   height: min-content;
-  min-height: 60vh;
+  min-height: 50vh;
   background-color: #fca311;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
@@ -151,16 +151,14 @@ button:hover {
 }
 
 .product {
-  width: 100%;
-  height: 40vh;
+  width: 80vw;
+  max-width: 1920px;
   border: 2px solid #ffffff;
-  border-radius: 2rem;
-  padding: 2rem;
-  overflow: hidden;
+  scroll-behavior: smooth;
 }
 .product h1 {
-  margin: 1rem 0;
-  font-size: 3rem;
+  margin: 2rem 0;
+  font-size: 2.8rem;
 }
 .product h2 {
   font-size: 2.8rem;
@@ -193,6 +191,11 @@ button:hover {
   padding: 2rem;
   display: flex;
   gap: 2rem;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+}
+.product .product__container::-webkit-scrollbar {
+  display: none;
 }
 .product .product__container .card {
   width: 25%;
@@ -200,10 +203,11 @@ button:hover {
   flex-shrink: 0;
   flex-grow: 1;
   background-color: #ffffff;
+  border: 2px solid #eee;
   color: #444444;
   padding: 2rem;
   border-radius: 1rem;
-  box-shadow: 0 1rem 5rem rgba(0, 0, 0, 0.0823529412);
+  box-shadow: 0 1rem 0.5rem rgba(0, 0, 0, 0.0823529412);
   transition: all 0.3s;
   display: flex;
   align-items: stretch;
@@ -212,7 +216,7 @@ button:hover {
 }
 .product .product__container .card:hover {
   transform: translateY(-0.5rem);
-  box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.1450980392);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1450980392);
 }
 .product .product__container .card__head {
   font-size: 2.1rem;
